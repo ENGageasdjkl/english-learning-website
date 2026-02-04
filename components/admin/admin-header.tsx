@@ -48,6 +48,11 @@ export function AdminHeader() {
                   Switch to User View
                 </Link>
               </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link href="/assistant" className="cursor-pointer">
+                  Switch to Assistant View
+                </Link>
+              </DropdownMenuItem>
               <DropdownMenuSeparator />
               <DropdownMenuItem asChild>
                 <Link href="/" className="cursor-pointer text-destructive">

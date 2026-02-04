@@ -10,7 +10,7 @@ const navLinks = [
   { href: "/dashboard", label: "Dashboard" },
   { href: "/vocabulary", label: "Vocabulary" },
   { href: "/reading", label: "Reading" },
-  { href: "/about", label: "About" },
+  { href: "/feedback", label: "Feedback" },
 ];
 
 export function Navigation() {

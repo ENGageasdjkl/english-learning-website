@@ -1,24 +1,22 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { LayoutDashboard, Users, BookOpen, FileText, ClipboardList } from "lucide-react";
+import { StickyNote, BookOpenCheck, FilePenLine } from "lucide-react";
 
-type Tab = "dashboard" | "users" | "vocabulary" | "articles" | "records";
+type Tab = "mnemonics" | "outlines" | "vocabulary";
 
-interface AdminSidebarProps {
+interface AssistantSidebarProps {
   activeTab: Tab;
   onTabChange: (tab: Tab) => void;
 }
 
 const menuItems = [
-  { id: "dashboard" as Tab, label: "Dashboard", icon: LayoutDashboard },
-  { id: "users" as Tab, label: "User Management", icon: Users },
-  { id: "vocabulary" as Tab, label: "Vocabulary Management", icon: BookOpen },
-  { id: "articles" as Tab, label: "Articles Management", icon: FileText },
-  { id: "records" as Tab, label: "Records Management", icon: ClipboardList },
+  { id: "mnemonics" as Tab, label: "Mnemonic Management", icon: StickyNote },
+  { id: "outlines" as Tab, label: "Vocabulary Outlines", icon: BookOpenCheck },
+  { id: "vocabulary" as Tab, label: "Word Editing", icon: FilePenLine },
 ];
 
-export function AdminSidebar({ activeTab, onTabChange }: AdminSidebarProps) {
+export function AssistantSidebar({ activeTab, onTabChange }: AssistantSidebarProps) {
   return (
     <aside className="fixed left-0 top-16 bottom-0 w-64 border-r border-border/50 bg-card/50 p-4">
       <nav className="space-y-2">
