@@ -1,14 +1,13 @@
 import fs from "fs";
 import path from "path";
-
-import Database from "better-sqlite3";
+import { DatabaseSync } from "node:sqlite";
 
 const DATA_DIR = path.join(process.cwd(), "data");
 const DB_PATH = path.join(DATA_DIR, "english-learning.db");
 
-let dbInstance: Database.Database | null = null;
+let dbInstance: DatabaseSync | null = null;
 
-const createTables = (db: Database.Database) => {
+const createTables = (db: DatabaseSync) => {
   db.exec(`
     CREATE TABLE IF NOT EXISTS lessons (
       id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -47,7 +46,7 @@ export const getDb = () => {
   }
 
   fs.mkdirSync(DATA_DIR, { recursive: true });
-  dbInstance = new Database(DB_PATH);
+  dbInstance = new DatabaseSync(DB_PATH);
   createTables(dbInstance);
   return dbInstance;
 };
