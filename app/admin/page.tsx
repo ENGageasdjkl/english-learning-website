@@ -7,8 +7,9 @@ import { UsersManagement } from "@/components/admin/users-management";
 import { VocabularyManagement } from "@/components/admin/vocabulary-management";
 import { ArticlesManagement } from "@/components/admin/articles-management";
 import { AdminDashboard } from "@/components/admin/admin-dashboard";
+import { RecordsManagement } from "@/components/admin/records-management";
 
-type Tab = "dashboard" | "users" | "vocabulary" | "articles";
+type Tab = "dashboard" | "users" | "vocabulary" | "articles" | "records";
 
 export default function AdminPage() {
   const [activeTab, setActiveTab] = useState<Tab>("dashboard");
@@ -23,6 +24,8 @@ export default function AdminPage() {
         return <VocabularyManagement />;
       case "articles":
         return <ArticlesManagement />;
+      case "records":
+        return <RecordsManagement />;
       default:
         return <AdminDashboard />;
     }

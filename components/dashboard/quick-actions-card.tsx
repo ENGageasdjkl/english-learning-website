@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Zap, BookOpen, Search, Heart, FileText } from "lucide-react";
+import { Zap, BookOpen, Search, Heart, FileText, MessageSquare } from "lucide-react";
 import Link from "next/link";
 
 const actions = [
@@ -8,6 +8,7 @@ const actions = [
   { label: "Search", href: "/vocabulary?search=true", icon: Search, color: "bg-cyan-500/10 text-cyan-500" },
   { label: "Favorites", href: "/favorites", icon: Heart, color: "bg-rose-500/10 text-rose-500" },
   { label: "Reading", href: "/reading", icon: FileText, color: "bg-blue-500/10 text-blue-500" },
+  { label: "Feedback", href: "/feedback", icon: MessageSquare, color: "bg-purple-500/10 text-purple-500" },
 ];
 
 export function QuickActionsCard() {

@@ -8,6 +8,7 @@ import {
   MessageSquare,
   ListChecks,
   GraduationCap,
+  Shield,
 } from "lucide-react";
 
 const features = [
@@ -50,6 +51,11 @@ const features = [
     icon: GraduationCap,
     title: "Learning Progress",
     description: "Track your learning journey with comprehensive statistics and achievement badges.",
+  },
+  {
+    icon: Shield,
+    title: "Role-Based Management",
+    description: "Dedicated consoles for assistants and administrators ensure secure multi-role collaboration.",
   },
 ];
 
